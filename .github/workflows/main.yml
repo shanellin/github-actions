@@ -47,7 +47,7 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_USERNAME: USER
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }} 
           SLACK_CHANNEL: general
           SLACK_COLOR: ${{ job.status }}
           SLACK_TITLE: SLACK_TITLE
