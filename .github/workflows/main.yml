@@ -43,13 +43,13 @@ jobs:
           echo test, and deploy project - ${{ env.PROJECT_ID }}.
           echo At ${{ steps.date.outputs.date }}
 
-#       - name: Slack notification
-#         uses: rtCamp/action-slack-notify@v2
-#         env:
-#           SLACK_USERNAME: USER
-#           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }} 
-#           SLACK_CHANNEL: general
-#           SLACK_COLOR: ${{ job.status }}
-#           SLACK_TITLE: SLACK_TITLE
-#           SLACK_ICON_EMOJI: https://github.com/rtCamp.png?size=48
-#         if: always()
+      - name: Slack notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_USERNAME: USER
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }} 
+          SLACK_CHANNEL: general
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_TITLE: SLACK_TITLE
+          SLACK_ICON_EMOJI: https://github.com/rtCamp.png?size=48
+        if: always()
